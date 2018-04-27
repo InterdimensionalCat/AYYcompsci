@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.params=
+comment0.target=BennettAI()
+comment1.params=game
+comment1.target=int\ play(char[])
+comment2.params=pos\ game\ spot
+comment2.target=int\ randomMove(int[],\ char[],\ int)
+comment3.params=c\ game\ spot
+comment3.target=int\ winningMove(char,\ char[],\ int)
+comment4.params=x\ y\ z\ game\ checkLetter
+comment4.target=int\ betterWin(int,\ int,\ int,\ char[],\ char)
+comment5.params=x\ y\ z\ game
+comment5.target=int\ getWinningSpot(int,\ int,\ int,\ char[])
+numComments=6

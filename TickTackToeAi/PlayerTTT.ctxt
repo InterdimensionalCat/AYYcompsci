@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.params=name
+comment0.target=PlayerTTT(java.lang.String)
+comment1.params=name
+comment1.target=void\ setName(java.lang.String)
+comment2.params=letter
+comment2.target=void\ setLetter(char)
+comment3.params=
+comment3.target=char\ getLetter()
+comment4.params=
+comment4.target=java.lang.String\ getName()
+comment5.params=game
+comment5.target=int\ play(char[])
+numComments=6

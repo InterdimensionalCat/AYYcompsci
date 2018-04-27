@@ -1,0 +1,84 @@
+import java.util.Arrays;
+
+public class MergeSort {
+
+	public static void main(String[] args) {
+		
+		int[] c = {1,3,2,4,6,5,9};
+		c = sort(c);
+		
+		System.out.println(Arrays.toString(c));
+	}
+	
+	public static int[] merge(int[] a, int[] b) {
+		int i = 0;
+		int j = 0;
+		int k = 0;
+		
+		int[] arr = new int[a.length + b .length];
+		
+		while(k < arr.length) {
+			if(i >= a.length) {
+				arr[k] = b[j];
+				j++;
+			} else {
+				if(j >= b.length) {
+					arr[k] = a[i];
+					i++;
+				} else {
+					if(a[i] < b[j]) {
+						arr[k] = a[i];
+						i++;
+					} else {
+						arr[k] = b[j];
+						j++;
+					}
+				}
+			}
+			k++;
+		}
+		return arr;
+	}
+	
+	public static int[] sort(int[] unsorted) {
+		if(unsorted.length > 1) {
+			int[] arr = new int[unsorted.length];
+			if(unsorted.length % 2 == 0) {
+				int[] left = new int[unsorted.length / 2];
+				int[] right = new int[unsorted.length / 2];
+				for(int i = 0; i < unsorted.length / 2; i++) {
+					left[i] = unsorted[i];
+					right[i] = unsorted[unsorted.length - i - 1];
+				}
+				
+				left = sort(left);
+				right = sort(right);
+				
+				arr = merge(left, right);
+				
+				return arr;
+				
+			} else {
+				
+				int[] left = new int[unsorted.length / 2];
+				int[] right = new int[unsorted.length / 2 + 1];
+				for(int i = 0; i < unsorted.length / 2; i++) {
+					left[i] = unsorted[i];
+					right[i] = unsorted[unsorted.length - i - 1];
+				}
+				
+				right[right.length - 1] = unsorted[unsorted.length / 2 + 1];
+				
+				left = sort(left);
+				right = sort(right);
+				
+				arr = merge(left, right);
+				
+				return arr;
+			}
+		} else {
+			return unsorted;
+		}
+	}
+
+}

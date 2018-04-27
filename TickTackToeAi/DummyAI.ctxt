@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.params=
+comment0.target=DummyAI()
+comment1.params=game
+comment1.target=int\ play(char[])
+comment2.params=pos\ game\ spot
+comment2.target=int\ randomMove(int[],\ char[],\ int)
+comment3.params=x\ y\ z\ game\ checkLetter
+comment3.target=boolean\ isBlocked(int,\ int,\ int,\ char[],\ char)
+comment4.params=x\ y\ corners\ game\ l
+comment4.target=int\ getPosFromCorner(int,\ int,\ int[],\ char[],\ char)
+comment5.params=pos\ game
+comment5.target=boolean\ isPosFree(java.util.ArrayList,\ char[])
+numComments=6

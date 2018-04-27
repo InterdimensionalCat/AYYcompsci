@@ -1,0 +1,43 @@
+import java.util.Arrays;
+
+public class MergeSort {
+
+	public static void main(String[] args) {
+		int[] a = {1,3,5};
+		int[] b = {2,4,6};
+		int[] c = merge(a,b);
+		
+		System.out.println(Arrays.toString(c));
+	}
+	
+	public static int[] merge(int[] a, int[] b) {
+		int i = 0;
+		int j = 0;
+		int k = 0;
+		
+		int[] arr = new int[a.length + b .length];
+		
+		while(k < arr.length) {
+			if(i >= a.length) {
+				arr[k] = b[j];
+				j++;
+			} else {
+				if(j >= b.length) {
+					arr[k] = a[i];
+					i++;
+				} else {
+					if(a[i] < b[j]) {
+						arr[k] = a[i];
+						i++;
+					} else {
+						arr[k] = b[j];
+						j++;
+					}
+				}
+			}
+			k++;
+		}
+		return arr;
+	}
+
+}
